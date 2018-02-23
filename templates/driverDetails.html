@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Driver Details</h1>
+    {% for d in details %}
+        <div><p>Name: {{ d.firstName }} {{ d.lastName }}<br>Nationality: {{ d.nationality }}
+        <br>Race Number: {{ d.raceNum }}<br>Team: {{ d.team }}</p></div>
+    {% endfor %}
+{% endblock %}
+
+
+

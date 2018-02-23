@@ -1,0 +1,22 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Microblog:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('addDriver') }}">Add Driver</a>
+            <a href="{{ url_for('addTeam') }}">Add Team</a>
+            <a href="{{ url_for('addCalendar') }}">Add Calendar</a>
+            <a href="{{ url_for('driverDetails') }}">View Drivers</a>
+            <a href="{{ url_for('teamDetails') }}">View Team</a>
+            <a href="{{ url_for('viewCalendar') }}">View Calendar</a>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
