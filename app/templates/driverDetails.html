@@ -1,0 +1,21 @@
+<!-- driverDetails.html -->
+
+<!-- all other html files must now extend index.html and not base.html -->
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Driver Details</h1>
+    {% for d in details %}
+
+    <!--Card-->
+    <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">{{ d.firstName }} {{ d.lastName }}</h4>
+      <p class="card-text">Nationality: {{ d.nationality }}
+        <br>Race Number:<span class="badge">{{ d.raceNum }}</span><br>Team: {{ d.team }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

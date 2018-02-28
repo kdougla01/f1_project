@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Race Calendar</h1>
+    {% for d in details %}
+        <div><p>Country: {{ d.country }}<br>Track Name {{ d.track_name }}
+        <br>Start Date: {{ d.start_date }}
+        <br>End Date: {{ d.end_date }}</p></div>
+    {% endfor %}
+{% endblock %}
+
+
+

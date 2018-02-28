@@ -1,0 +1,13 @@
+<!-- teamDetails.html -->
+
+<!-- all other html files must now extend index.html and not base.html -->
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>Team Details</h1>
+    {% for d in details %}
+    <div><p>Team Name: {{ d.teamName }}<br>Nationality: {{ d.nationality }}<br>Drivers: {{ d.driver }}</p></div>
+    {% endfor %}
+{% endblock %}
+
+

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+<!-- import bootstrap wtf extension and
+set to variable name "wtf" -->
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Add Driver
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Drivers</h1>
+    {% if form %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <!-- use bootstrap pre-defined styles
+        for quickly creating fields -->
+        {{ wtf.form_field(form.firstName) }}
+        {{ wtf.form_field(form.lastName) }}
+        {{ wtf.form_field(form.raceNum) }}
+        {{ wtf.form_field(form.nationality) }}
+        {{ wtf.form_field(form.team) }}
+        {{ wtf.form_field(form.submit) }}
+    </form>
+</div>
+    {% endif %}
+{% endblock %}
+
+

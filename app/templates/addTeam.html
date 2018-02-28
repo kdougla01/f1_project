@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<div class="container">
+    <h1>Teams</h1>
+    {% if form %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+
+        {{ wtf.form_field(form.teamName) }}
+        {{ wtf.form_field(form.nationality) }}
+        {{ wtf.form_field(form.submit) }}
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

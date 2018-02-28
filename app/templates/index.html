@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Formula 1{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ url_for('index') }}">F1</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{ url_for('addDriver') }}">Add Driver</a></li>
+      <li><a href="{{ url_for('addTeam') }}">Add Team</a></li>
+      <li><a href="{{ url_for('addCalendar') }}">Add Calendar</a></li>
+      <li><a href="{{ url_for('driverDetails') }}">View Drivers</a></li>
+      <li><a href="{{ url_for('teamDetails') }}">View Team</a></li>
+      <li><a href="{{ url_for('viewCalendar') }}">View Calendar</a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to the Formula 1 page</h1>
+  <p>This page is all about Formula 1, including drivers, teams and tracks</p>
+</div>
+{% endblock %}
+
